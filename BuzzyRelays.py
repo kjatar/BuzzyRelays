@@ -38,14 +38,14 @@ relayTriggers = [
     bytearray.fromhex("3A 46 45 30 35 30 30 30 37 30 30 30 30 46 36 0D 0A")]
     
 def resetRelays():
-    ser.write(relayTriggers[2])
-    ser.write(relayTriggers[4])
-    ser.write(relayTriggers[6])
-    ser.write(relayTriggers[8])
-    ser.write(relayTriggers[10])
-    ser.write(relayTriggers[12])
-    ser.write(relayTriggers[14])
-    ser.write(relayTriggers[16])
+    ser.write(relayTriggers[1])
+    ser.write(relayTriggers[3])
+    ser.write(relayTriggers[5])
+    ser.write(relayTriggers[7])
+    ser.write(relayTriggers[9])
+    ser.write(relayTriggers[11])
+    ser.write(relayTriggers[13])
+    ser.write(relayTriggers[15])
 
 if len(sys.argv) != 2:
     print ("Usage: python BuzzyRelays.py <relay #>")
@@ -115,6 +115,6 @@ if sys.argv[1] == "8":
 
 if sys.argv[1] == "RANDOM":
     for i in range(1, 20):
-        ser.write(relayTriggers[random.randint(1,16)])
+        ser.write(relayTriggers[random.randint(0,15)])
         sleep(10)
     resetRelays()
