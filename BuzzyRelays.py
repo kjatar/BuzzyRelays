@@ -113,7 +113,7 @@ if sys.argv[1] == "8":
     ser.write(bytearray.fromhex("3A 46 45 30 35 30 30 30 37 30 30 30 30 46 36 0D 0A"))
 
 
-if sys.arg[1] == "RANDOM":
+if sys.argv[1] == "RANDOM":
     for i in range(1, 20):
         ser.write(relayTriggers[random.randint(1,16)])
         sleep(10)
