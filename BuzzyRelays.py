@@ -116,5 +116,5 @@ if sys.argv[1] == "8":
 if sys.argv[1] == "RANDOM":
     for i in range(1, 20):
         ser.write(relayTriggers[random.randint(0,15)])
-        sleep(10)
+        sleep(random.randint(1, 40))
     resetRelays()
